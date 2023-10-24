@@ -1,0 +1,8 @@
+.custom-select {
+  display: flex;
+  justify-content: center;
+  min-height: 200px;
+}
+app-custom-select  {
+    margin-right: 20px;
+}

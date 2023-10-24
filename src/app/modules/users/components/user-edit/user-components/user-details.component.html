@@ -1,0 +1,13 @@
+<div *ngIf="user">
+  <p>{{user.address.street}}</p>
+  <p>{{user.address.zipcode}}</p>
+  <p>{{user.phone}}</p>
+  <input id="red" type="radio" class = "btn" name ="color" value="red" (change)="update($event)">
+  <label  style="color:  red;" for="red">red</label>
+
+  <input id="black" type="radio" class = "btn"  name="color" value="black" (change)="update($event)">
+  <label style="color: black;" for="black">black</label>
+
+  <input id="green" type="radio" class = "btn" name="color" value="green" (change)="update($event)">
+  <label style="color: green;"  for="green">green</label>
+</div>

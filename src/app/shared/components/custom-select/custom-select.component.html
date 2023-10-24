@@ -1,0 +1,9 @@
+<div   #select (keydown)="onKeyDown($event)" >
+<input type="text"  (click)="dropdownOpen()"  [(ngModel)]="term" [(ngModel)]="drpodownName"  >
+<div *ngFor="let item of items | selectFilter: term: nameForKey;   let i = index  ">
+  <input type ="checkbox" #checkbox *ngIf = "showDropdown" [checked]="isChecked[i]" [ngClass]="{active:active == i }"  (click)="onSelect($event,item,i)"  ><span *ngIf = "showDropdown" [ngClass]="{active:active == i }">{{item[nameForKey]}}</span>
+</div>
+</div>
+
+
+

@@ -1,0 +1,14 @@
+<div (keydown)="onKeyDown($event)">
+  <input type="text" (click)="dropdownOpen()" readonly [(ngModel)]="dropdownName" />
+  <ng-container *ngIf="showDropdown">
+    <div *ngFor="let item of treeSelectItems; let i = index">
+      <div (click)="treeSelectOpen(item[valueForKey], i)" [ngClass]="{active: activeIndex === i }">{{item[nameForKey]}}
+        <ng-container *ngIf="item[valueForKey]===openedParentId">
+          <div *ngFor="let childItem of item[childItemKey] let i = index">
+            <div (click)="onSelect(childItem)" [ngClass]="{childActive: childActiveIndex === i }">{{childItem[nameForKey]}}</div>
+          </div>
+        </ng-container>
+      </div>
+    </div>
+  </ng-container>
+</div>

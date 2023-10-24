@@ -1,0 +1,42 @@
+<div class="container">
+  <div class="row">
+    <div class="col-md-6">
+      <div class="card">
+        <div class="text-center">
+          <!-- <h1></h1> -->
+
+            <form *ngIf="userEditForm" [formGroup]="userEditForm" (ngSubmit)="editUser()" >
+              <div class="mb-3">
+                <label for="email" class="form-label">Email </label>
+                <input type="email" class="form-control" id="email" formControlName="email">
+              </div>
+              <div class="mb-3">
+                <label for="userName" class="form-label">User name</label>
+                <input type="text" class="form-control" id="userName" formControlName="userName" >
+              </div>
+
+              <div class="mb-3">
+                <label for="firstName" class="form-label">First name</label>
+                <input type="text" class="form-control" id="firstName"  formControlName="firstName">
+
+              </div>
+              <div class="mb-3">
+                <label for="lastName" class="form-label">Last name</label>
+                <input type="text" class="form-control" id="lastName" formControlName="lastName">
+              </div>
+              <div class="mb-3">
+                <label for="city" class="form-label">City</label>
+                <input type="text" class="form-control" id="city" formControlName="city">
+              </div>
+
+
+              <button type="submit" class="submit">Edit</button>
+            </form>
+           <app-user-details [user]="user" (colorChange)="updateUsercolor($event)"></app-user-details>
+          <a routerLink="/userlist">UserList</a>
+
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
