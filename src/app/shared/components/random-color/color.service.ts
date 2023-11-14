@@ -6,10 +6,10 @@ import { Injectable } from '@angular/core';
   providedIn: 'root',
 })
 export class ColorService {
-  colorMode = new BehaviorSubject<string>('white');
+   colorMode = new BehaviorSubject<string>(localStorage.getItem('Mode') as string);
   colorChange: Subject<string> = new Subject<string>();
   constructor() {
-    console.log('stexcvec');
+
   }
 
   randomColor = () => {

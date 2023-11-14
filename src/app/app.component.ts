@@ -20,8 +20,11 @@ export class AppComponent implements OnInit {
   changeTheme(e: any): void{
     if(e.target.checked) {
       this.colorService.colorMode.next('gray');
+      localStorage.setItem('Mode','gray');
     }else {
-      this.colorService.colorMode.next('white')
+      this.colorService.colorMode.next('white');
+      localStorage.setItem('Mode','white');
+
     }
 
 
