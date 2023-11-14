@@ -1,3 +1,4 @@
+import { ColorService } from './../../../../shared/components/random-color/color.service';
 import { Component, OnInit, inject } from '@angular/core';
 import { UsersService } from 'src/app/modules/users/services/user.service';
 import { MatDialog } from '@angular/material/dialog';

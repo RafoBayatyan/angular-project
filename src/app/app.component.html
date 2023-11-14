@@ -1,2 +1,13 @@
+<div [style.backgroundColor] = 'colorService.colorMode | async'
+>
+<div style="border: 1px solid black; width: 100px;" class="conteiner">
+  <h3>Menu</h3>
+  <a routerLink="/user/list-general">UserList</a>
+  <a routerLink="/bank/bank-account">BankAccount</a>
+  <input type="checkbox" (click)="changeTheme($event)">DarkMode
+
+</div>
+
+
 <router-outlet></router-outlet>
-<!-- <app-user-list></app-user-list> -->
+</div>

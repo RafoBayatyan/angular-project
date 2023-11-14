@@ -33,7 +33,9 @@
               <button type="submit" class="submit">Edit</button>
             </form>
            <app-user-details [user]="user" (colorChange)="updateUsercolor($event)"></app-user-details>
-          <a routerLink="/userlist">UserList</a>
+          <a routerLink="/user/list-general">UserList</a>
+          <app-random-color componentName="userEditComponent"></app-random-color>
+          <span>Theme: </span>
 
         </div>
       </div>

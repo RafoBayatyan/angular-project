@@ -11,12 +11,15 @@
       <td>{{user.username}}</td>
       <td>{{user.email}}</td>
       <td [style.backgroundColor]='user.color'>{{user.color}}</td>
-      <button routerLink="/useredit/{{user.id}}" >Edit</button>
+      <button routerLink="/user/edit/{{user.id}}" >Edit</button>
       <button (click)="deleteUser(i)">Delete</button>
     </tr>
   </tbody>
 </table>
 <div class="custom-select">
+  <app-random-color componentName="userListComponent"></app-random-color>
   <app-custom-select [items] = 'testArray' [valueForKey] = 'valueForKey' [nameForKey] = 'nameForKey' (selectItem) = "selectUser($event)" ></app-custom-select>
   <app-custom-tree-select [treeSelectItems] = 'treeSelectTestArray'  [valueForKey] = 'valueForKey' [nameForKey] = 'nameForKey' [childItemKey]='item' (selectItem) = "treeSelectUser($event)"></app-custom-tree-select>
 </div>
+<app-another-component>
+</app-another-component>

@@ -6,13 +6,18 @@ import { UserDetailsComponent } from './components/user-edit/user-components/use
 import { UserEditComponent } from './components/user-edit/user-edit.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { SharedModule } from 'src/app/shared/shared.module';
+import { UserListGeneralComponent } from './components/user-list-general/user-list-general/user-list-general.component';
+import { AnotherComponentComponent } from './components/another-component/another-component/another-component.component';
 
 
 @NgModule({
   declarations: [
     UserListComponent,
     UserEditComponent,
-    UserDetailsComponent
+    UserDetailsComponent,
+    UserListGeneralComponent,
+    AnotherComponentComponent,
+
   ],
   imports: [
     CommonModule,

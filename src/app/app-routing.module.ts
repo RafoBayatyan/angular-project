@@ -12,6 +12,10 @@ const routes: Routes = [
   { path: 'signup', component: SignupComponent },
   { path: 'calc', component: CalculatorComponent },
   { path: 'user', loadChildren: () => import('./modules/users/users.module').then(m => m.UsersModule), canActivate: [authGuard] },
+  { path: 'bank', loadChildren: () => import('./modules/bank/bank.module').then(m => m.BankModule), canActivate: [authGuard] },
+
+
+
 ];
 
 @NgModule({

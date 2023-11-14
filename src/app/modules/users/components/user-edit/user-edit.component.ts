@@ -71,7 +71,7 @@ export class UserEditComponent implements OnInit {
   editUser() {
     if (this.userEditForm.valid) {
       this.userService.editUser(this.user!.id, this.userEditForm.value);
-      this.router.navigateByUrl('/user/list');
+      this.router.navigateByUrl('/user/list-general');
     }
   }
 

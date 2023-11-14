@@ -28,7 +28,7 @@ export class LoginComponent {
         ) {
           this.auth.onLogin();
           localStorage.setItem("isLogin",JSON.stringify(true) )
-          this.router.navigateByUrl('/user/list');
+          this.router.navigateByUrl('/user/list-general');
         }
       });
     }
