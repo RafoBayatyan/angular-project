@@ -4,7 +4,7 @@
   <h3>Menu</h3>
   <a routerLink="/user/list-general">UserList</a>
   <a routerLink="/bank/bank-account">BankAccount</a>
-  <input type="checkbox" (click)="changeTheme($event)">DarkMode
+  <input type="checkbox" (click)="changeTheme($event)" [checked] = "(colorService.colorMode | async) === 'gray' " >DarkMode
 
 </div>
 

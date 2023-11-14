@@ -4,6 +4,7 @@ import { ActivatedRoute } from '@angular/router';
 import { UsersService } from 'src/app/modules/users/services/user.service';
 import { FormGroup, FormBuilder, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
+import { ColorService } from 'src/app/shared/components/random-color/color.service';
 
 @Component({
   selector: 'app-user-edit',
@@ -15,6 +16,7 @@ export class UserEditComponent implements OnInit {
   userService = inject(UsersService);
   formbuilder = inject(FormBuilder);
   router = inject(Router);
+  colorService = inject(ColorService);
 
   user?: User;
   userEditForm!: FormGroup;
