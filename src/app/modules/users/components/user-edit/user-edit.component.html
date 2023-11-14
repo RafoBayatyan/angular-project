@@ -30,7 +30,7 @@
               </div>
 
 
-              <button type="submit" class="submit" [class.color]="(colorService.colorMode | async) === 'gray'">Edit</button>
+              <button type="submit" class="submit" [class.color]="!colorService.isDefoult">Edit</button>
             </form>
            <app-user-details [user]="user" (colorChange)="updateUsercolor($event)"></app-user-details>
           <a routerLink="/user/list-general">UserList</a>

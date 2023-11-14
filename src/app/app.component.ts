@@ -1,6 +1,7 @@
 import { Component, inject, OnInit,  } from '@angular/core';
 import { AuthService } from './services/auth.service';
 import { ColorService } from './shared/components/random-color/color.service';
+import { ThemeColors } from './core/enums/theme.enum';
 
 @Component({
   selector: 'app-root',
@@ -18,14 +19,9 @@ export class AppComponent implements OnInit {
     }
   }
   changeTheme(e: any): void{
-    if(e.target.checked) {
-      this.colorService.colorMode.next('gray');
-      localStorage.setItem('Mode','gray');
-    }else {
-      this.colorService.colorMode.next('white');
-      localStorage.setItem('Mode','white');
-
-    }
+    const newTheme = e.target.checked ? ThemeColors.Gray : ThemeColors.White;
+    this.colorService.colorMode.next(newTheme);
+    localStorage.setItem('Mode',newTheme);
 
 
   }

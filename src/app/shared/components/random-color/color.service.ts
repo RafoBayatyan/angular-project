@@ -1,5 +1,6 @@
 import { BehaviorSubject, Subject } from 'rxjs';
 import { Injectable } from '@angular/core';
+import { ThemeColors } from 'src/app/core/enums/theme.enum';
 
 
 @Injectable({
@@ -8,6 +9,13 @@ import { Injectable } from '@angular/core';
 export class ColorService {
    colorMode = new BehaviorSubject<string>(localStorage.getItem('Mode') as string);
   colorChange: Subject<string> = new Subject<string>();
+  get isDefoult() {
+    if(this.colorMode.getValue() === ThemeColors.Gray) {
+      return false;
+    }else{
+      return true;
+    }
+  }
   constructor() {
 
   }
