@@ -6,6 +6,7 @@ import { CalculatorComponent } from '../components/calculator/calculator.compone
 import { SelectFilterPipie } from './components/custom-select/filter-select.pipe';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { RandomColorComponent } from './components/random-color/random-color.component';
+import { VerifyCodeComponent } from './components/verify-code/verify-code.component';
 
 @NgModule({
   declarations: [
@@ -13,7 +14,8 @@ import { RandomColorComponent } from './components/random-color/random-color.com
    CustomTreeSelectComponent,
    CalculatorComponent,
    SelectFilterPipie,
-   RandomColorComponent
+   RandomColorComponent,
+   VerifyCodeComponent
   ],
   imports: [
     CommonModule,
@@ -24,7 +26,8 @@ import { RandomColorComponent } from './components/random-color/random-color.com
     CustomSelectComponent,
     CustomTreeSelectComponent,
     CalculatorComponent,
-    RandomColorComponent
+    RandomColorComponent,
+    VerifyCodeComponent
   ]
 })
 export class SharedModule {}

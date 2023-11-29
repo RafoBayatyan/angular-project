@@ -10,6 +10,7 @@ import { SignupComponent } from './components/signup/signup.component';
 import { LoginComponent } from './components/login/login.component';
 import { PopUpComponent } from './components/pop-up/pop-up.component';
 import { HttpInterceptorService } from './core/interceptor/interseptor';
+import { SharedModule } from './shared/shared.module';
 
 
 
@@ -27,6 +28,7 @@ import { HttpInterceptorService } from './core/interceptor/interseptor';
     FormsModule,
     ReactiveFormsModule,
     MatDialogModule,
+    SharedModule
   ],
   providers: [ { provide: HTTP_INTERCEPTORS, useClass: HttpInterceptorService, multi: true } ],
   bootstrap: [AppComponent]

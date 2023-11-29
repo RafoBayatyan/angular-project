@@ -1,0 +1,14 @@
+<div>
+  <div>
+    <input type="text" #txt1 maxlength="1" [ngClass]="{readonly:!!txt1.value}" (keyup)="move($event, '', txt1, txt2)" (input)="whenInput($event)" (paste)="pastCode($event,txt1,txt2,txt3,txt4)">
+  </div>
+  <div>
+    <input type="text" #txt2 maxlength="1" [ngClass]="{readonly:!!txt1.value}" (keyup)="move($event, txt1, txt2, txt3)" (input)="whenInput($event)" (paste)="pastCode($event,txt1,txt2,txt3,txt4)">
+  </div>
+  <div>
+    <input type="text" #txt3 maxlength="1" [ngClass]="{readonly:!!txt1.value}" (keyup)="move($event, txt2, txt3, txt4)" (input)="whenInput($event)" (paste)="pastCode($event,txt1,txt2,txt3,txt4)">
+  </div>
+  <div>
+    <input type="text" #txt4 maxlength="1" (keyup)="move($event, txt3, txt4, '')" (input)="whenInput($event)" (paste)="pastCode($event,txt1,txt2,txt3,txt4)">
+  </div>
+</div>
